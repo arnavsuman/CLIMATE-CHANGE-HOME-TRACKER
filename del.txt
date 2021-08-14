@@ -1,0 +1,51 @@
+coal = st.sidebar.selectbox('Taxation on use of Coal Sources',['Status Quo','Very Highly Taxed', 'Highly Taxed', 'Taxed', 'Subsidized'])
+renewables = st.sidebar.selectbox('Taxation on Renewable Sources', [ 'Status Quo', 'Taxed', 'Subsidized', 'Highly Subsidized'])
+nuclear = st.sidebar.selectbox('Taxation on Nuclear Sources', [ 'Status Quo', 'Highly Taxed', 'Taxed', 'Subsidized', 'Highly Subsidized'])
+oil = st.sidebar.selectbox('Taxation on Oil Sources', [ 'Status Quo', 'Vert Highly Taxed', 'Highly Taxed', 'Taxed', 'Subsidized'])
+natural_gas = st.sidebar.selectbox('Taxation on Natural Gas Sources', [ 'Status Quo', 'Vert Highly Taxed', 'Highly Taxed', 'Taxed', 'Subsidized'])
+new_zero_carbon = st.sidebar.selectbox('No Emission Power Supply Technology', ['Status Quo','Breakthrough', 'Huge Breakthrough'])
+bioenergy =  st.sidebar.selectbox('Taxation on Biological Sources like Food Waste, Agricultural Waste, etc', [ 'Status Quo', 'Highly Taxed', 'Taxed', 'Subsidized', 'Highly Subsidized'])
+carbon_price = st.sidebar.selectbox('Global Carbon Price', ['Status Quo','Medium', 'High', 'Very High'])
+
+
+
+st.sidebar.header('TRANSPORT')
+
+energy_efficiency_transport = st.sidebar.selectbox('Energy Efficiency of Transport vehicles', ['Status Quo', 'Discouraged', 'Increased', 'Highly Increased'])
+electrification_transport = st.sidebar.selectbox('Electrification of Transport vehicles', ['Status Quo', 'Incentivized', 'Highly Incentivized'])
+
+
+st.sidebar.header('BUILDINGS AND INDUSTRY')
+
+energy_efficiency = st.sidebar.selectbox('Efficiency of Home and Industrial Appliances', ['Status Quo', 'Discouraged', 'Increased', 'Highly Increased'])
+electrification = st.sidebar.selectbox('Use of Electricity', ['Status Quo', 'Incentivized', 'Highly Incentivized'])
+
+
+st.sidebar.header('PERSONAL HABITS')
+
+vegan = st.sidebar.selectbox('Veganism', ['Status Quo', 'Highly Promoted', 'Negatively Promoted'])
+cars = st.sidebar.selectbox('No. of Cars in Family', [1,2,3,0])
+public_transport = st.sidebar.selectbox('Public Transport Use', ['Status Quo', 'Used oftenly', 'Never Used'])
+politics = st.sidebar.selectbox('Political Attitude on Climate Change', ['Status Quo', 'Negative', 'Positive'])
+awareness = st.sidebar.selectbox('Public Awareness on Climate Change', ['Status Quo', 'Negative', 'Positive'])
+
+
+st.sidebar.header('GROWTH')
+
+population = st.sidebar.selectbox('Population Growth', ['Status Quo', 'Lowest Growth', "Low Growth", "High growth", "Highest Growth"])
+economic_growth = st.sidebar.selectbox('Economic growth', ['Status Quo', "Low growth", "High Growth"])
+
+st.sidebar.header('LAND AND INDUSTRY EMISSIONS')
+
+deforestation = st.sidebar.selectbox('Deforestation', ['Status Quo', 'highly Reduced', 'Moderately Reduced', 'Increased'])
+methane = st.sidebar.selectbox('Methane & Other Gases', ['Status Quo', 'highly Reduced', 'Moderately Reduced', 'Increased'])
+
+st.sidebar.header('CARBON REMOVAL')
+
+afforestation = st.sidebar.selectbox('Aforestation', ['Status Quo', 'Low Growth', 'Medium Growth', 'High Growth'])
+technological = st.sidebar.selectbox('Technological Advances to remove carbon', ['Status Quo', 'Low Growth', 'Medium Growth', 'High Growth'])
+
+
+
+
+
