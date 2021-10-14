@@ -66,11 +66,11 @@ with col2:
     Made by Arnav Suman
     """)
 
-'''st.markdown(
-    """<a style='display: block; text-align: center;' href="https://github.com/arnavcool123/CLIMATE-CHANGE-HOME-TRACKER.git">Click to see Code on Github</a>
-    """,
-    unsafe_allow_html=True,
-)'''
+#'''st.markdown(
+#    """<a style='display: block; text-align: center;' href="https://github.com/arnavcool123/CLIMATE-CHANGE-HOME-TRACKER.git">Click to see Code on Github</a>
+#    """,
+#    unsafe_allow_html=True,
+#)
 
 st.sidebar.header('ENERGY SUPPLY')
 
