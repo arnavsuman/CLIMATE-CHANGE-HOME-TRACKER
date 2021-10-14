@@ -65,13 +65,13 @@ with col2:
     st.write("""
     Made by Arnav Suman
     """)
-'''col11, mid1, col21 = st.beta_columns([1,10,20])
-with col1:
-    st.write('')
-with col2:
-    st.write("""
-    See Code on GitHub []
-    """)'''
+
+'''st.markdown(
+    """<a style='display: block; text-align: center;' href="https://github.com/arnavcool123/CLIMATE-CHANGE-HOME-TRACKER.git">Click to see Code on Github</a>
+    """,
+    unsafe_allow_html=True,
+)'''
+
 st.sidebar.header('ENERGY SUPPLY')
 
 #base_unit = st.sidebar.selectbox('Select base currency', currency_list)
@@ -933,8 +933,15 @@ df = pd.DataFrame({
 })
 df = df.rename(columns={'Year':'index'}).set_index('index')
 st.line_chart(df)
+temp = str(temp)
+if len(temp) >4:
+    temp = temp[:5]
+while temp[-1] =='0':
+    temp = temp[:-1]
+
+st.header('Rise in Global Teperature by 2100')
 st.write("""
-# """, str(temp), """° C
+# """, '+ ', temp,  """° C
 """)
 
 # map_data = pd.DataFrame(
@@ -955,14 +962,48 @@ st.write("""
 
 
 #     """)
-
-col11, mid1, col21 = st.beta_columns([1,10,20])
-with col11:
+for i in range(1,5):
     st.write('')
-with col21:
-    st.write("""
-    ## Select Map style
+st.write("""
+    ## Expected Global Water Level Rise
     """)
+
+st.write('')
+temp = float(temp)
+
+if temp <3.6:
+    water_level_metric = 69.1
+    water_level_imperial = 27.20
+    city = 'Venice, Bangkok, Miami, Los Angeles, Tokyo, Shanghai, London, Sydney, Melbourne, Mumbai, New york'
+else:
+    water_level_metric = 111.2
+    water_level_imperial = 43.77
+    city = 'Venice, Jakarta, Houston, Bangkok, Miami, Los Angeles, Tokyo, Rio de Janeiro, Shanghai, London, Bahamas, Sydney, Melbourne, Mumbai, San Francisco, New york'
+
+col111, mid11, col211 = st.beta_columns([1,10,20])
+with col111:
+    images = Image.open('sea.jpg')
+    st.image(images, width=250)
+with col211:
+    st.write("""
+    # +""", water_level_metric, """ cm ( +""",water_level_imperial,""" inches)
+    """)
+    st.write("""
+    ### Major Cities like """, city, """ will be under water by 2100.
+    # """)
+
+for i in range(1,5):
+    st.write('')
+
+title_container = st.beta_container()
+with title_container:
+    col11, mid1, col21 = st.beta_columns([1,10,20])
+    with col11:
+        st.write('')
+    with col21:
+        st.write("""
+        ## Select Map style
+        """)
 map_style = st.radio('', ['Satellite', 'Light', 'Dark'])
 
 if map_style == 'Satellite':
@@ -993,6 +1034,7 @@ st.write("""
 """)
 st.write("""
 ###### Hold Ctrl Key or ⌘ Key to Rotate Map and Scroll to Zoom! Enter your Country through the side Panel.
+###### Demo Data Used may differ from real world values. 
 """)
 
 
@@ -1029,14 +1071,14 @@ for ol in range(3):
     st.write("""""")
 
 st.write("""
-### Every Dot you see here is place where climate change was reported. Greater the Height of Cyclinders, Greater the CLimate Change.
+### Every Dot you see here is a place where climate change was reported. Greater the Height of Cyclinders, Greater the CLimate Change.
 """)
 
 st.write("""
 # Climate Change Hotspots
 """)
 st.write("""
-### If you Country is marked You will be affected by Climate Chnage.
+### If you Country is marked You will be affected by Climate Change.
 """)
 st.write("")
 coordinates = pd.read_csv("coordinates.csv")
