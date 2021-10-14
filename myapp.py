@@ -65,13 +65,13 @@ with col2:
     st.write("""
     Made by Arnav Suman
     """)
-col11, mid1, col21 = st.beta_columns([1,10,20])
+'''col11, mid1, col21 = st.beta_columns([1,10,20])
 with col1:
     st.write('')
 with col2:
     st.write("""
     See Code on GitHub []
-    """)
+    """)'''
 st.sidebar.header('ENERGY SUPPLY')
 
 #base_unit = st.sidebar.selectbox('Select base currency', currency_list)
