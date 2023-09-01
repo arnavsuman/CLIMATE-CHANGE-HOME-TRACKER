@@ -1088,7 +1088,7 @@ for ol in range(5):
     st.write("""""")
 
 st.write("""
-### Property of Arnav Suman Copyright@2021
+### Property of Arnav Suman Copyright@2023
 Coded in streamlit library in Python and hosted on heroku a free web host.
 
 """)
